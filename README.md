@@ -35,6 +35,8 @@ pip install cython numba sympy
 cd src/super_quadric
 python setup.py install
 cd ../..
+
+python create_vid2cad.py
 ```
 
 ## Run
