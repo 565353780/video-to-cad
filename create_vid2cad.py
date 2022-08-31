@@ -10,11 +10,11 @@ output_file_path = "/home/chli/chLi/ScanNet/scannet_imgs"
 
 image_filename_list = os.listdir(image_folder_path)
 
+image_file_basename_list = [image_filename.split(".")[0] for image_filename in image_filename_list]
+
 scannet_imgs_dict = {
     "scene0000_00": {
-        "img_names": [
-            image_filename.split(".")[0] for image_filename in image_filename_list
-        ]
+        "img_names": image_file_basename_list[:10],
     }
 }
 
