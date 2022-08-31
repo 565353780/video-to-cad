@@ -19,6 +19,13 @@ ln -s <path-to-scannet-dataset-folder> ./data
 ln -s <path-to-pretrained-model-folder> ./experiments
 ```
 
+make sure it looks like
+
+```bash
+./data/ScanNet/scans/
+./experiments/detector.pth
+```
+
 ## Build
 
 ```bash
