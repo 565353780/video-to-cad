@@ -6,7 +6,7 @@ import torch.nn.functional as F
 import pickle
 
 import src.utils.box_utils as box_utils
-from learnable_primitives.sampling import EqualDistanceSamplerSQ, sample_points_on_surface
+from src.super_quadric.learnable_primitives.sampling import EqualDistanceSamplerSQ, sample_points_on_surface
 import src.utils.geometry_utils as geo_utils
 
 

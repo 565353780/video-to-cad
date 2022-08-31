@@ -3,9 +3,9 @@ import os
 import pickle
 
 import numpy as np
-from sympy import solve, symbols, diff, cos, sin, sign, Function, S
+from sympy import solve, symbols, diff, cos, sin, Function, S
 
-from learnable_primitives.fast_sampler import step_eta as fast_step_eta,\
+from learnable_primitives.fast_sampler._sampler import step_eta as fast_step_eta,\
     step_omega as fast_step_omega, collect_etas as fast_collect_etas,\
     collect_omegas as fast_collect_omegas, fast_sample, fast_sample_on_batch
 
