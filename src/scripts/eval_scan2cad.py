@@ -20,7 +20,7 @@ To evaluate on Vid2CAD, use min_views: 80
 DEBUG = True
 SCANNET_DIR = "./data/ScanNet/scans"
 VID2CAD_PATH = "/home/kejie/Downloads/results_vid2cad.csv"
-SCAN2CAD_PATH = "/home/kejie/Datasets/Scan2CAD/full_annotations.json"
+SCAN2CAD_PATH = "/home/chli/chLi/Scan2CAD/scan2cad_dataset/full_annotations.json"
 
 CARE_CLASSES = {
     "03211117": "display",
