@@ -14,7 +14,7 @@ image_file_basename_list = [image_filename.split(".")[0] for image_filename in i
 
 scannet_imgs_dict = {
     "scene0000_00": {
-        "img_names": image_file_basename_list[:10],
+        "img_names": image_file_basename_list[:80],
     }
 }
 
