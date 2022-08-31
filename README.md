@@ -40,8 +40,7 @@ cd ../..
 ## Run
 
 ```bash
-export PYTHONPATH=$PYTHONPATH:$PWD
-python src/scripts/run_processor.py --config_path ./configs/detr_scan_net.yaml --no_code --use_prior --out_dir ./result/e2e --representation super_quadric
+python run_processor.py --config_path ./configs/detr_scan_net.yaml --no_code --use_prior --out_dir ./result/e2e --representation super_quadric
 ```
 
 ## Enjoy it~
