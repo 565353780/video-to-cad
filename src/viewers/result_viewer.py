@@ -16,7 +16,7 @@ import src.utils.o3d_helper as o3d_helper
 from src.utils.o3d_helper import STANDARD_COLORS
 
 
-if __name__ == "__main__":
+def demo():
     args_parser = argparse.ArgumentParser()
     args_parser.add_argument("--path")
     args_parser.add_argument("--min_views", type=int, default=10)
@@ -58,3 +58,7 @@ if __name__ == "__main__":
         size=0.6, origin=[-0, -0, -0])
     visual_list.append(mesh_frame)
     o3d.visualization.draw_geometries(visual_list)
+
+if __name__ == "__main__":
+    demo()
+
