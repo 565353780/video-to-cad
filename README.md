@@ -31,7 +31,7 @@ make sure it looks like
 ```bash
 conda env create -f environment.yml
 conda activate odam
-pip install cython numba
+pip install cython numba sympy
 cd src/super_quadric
 python setup.py install
 cd ../..
