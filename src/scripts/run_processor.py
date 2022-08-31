@@ -15,8 +15,7 @@ from src.config.configs import ConfigLoader
 
 from src.datasets.transforms import get_transforms
 
-
-if __name__ == "__main__":
+def demo():
     arg_parser = argparse.ArgumentParser()
     arg_parser.add_argument("--config_path")
     arg_parser.add_argument("--detect_threshold", default=0.6, type=float)
@@ -90,3 +89,7 @@ if __name__ == "__main__":
                 "quadrics": out["quadrics"],
             }
             pickle.dump(out_dict, f)
+
+if __name__ == "__main__":
+    demo()
+
