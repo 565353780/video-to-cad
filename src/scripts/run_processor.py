@@ -39,7 +39,7 @@ def demo():
 
     transforms = get_transforms()
 
-    dataset_root = "./data/ScanNet/scans"
+    #  dataset_root = "./data/ScanNet/scans"
     dataset = ScanNetTrack()
     
     for seq_id in dataset.files:
