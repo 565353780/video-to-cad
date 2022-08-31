@@ -7,27 +7,17 @@ input data format:
 the processed data format is
    0   |    1   |   2 - 6    |  6 - 9   |9 - 12|  12   | 13    | 14  |   15-79  |
  img_id|class_id|project_bbox|dimensions| t_wo |sin_azi|cos_azi|score|shape_code|
-
-
 """
 
-import cv2
 import os
-import json
-import math
 import numpy as np
-from pathlib import Path
 from PIL import Image
 import pickle
-import scipy.io as sio
 import torch
 import torch.utils.data
 
-import src.datasets.transforms as T
 import src.datasets.scannet_utils as scannet_utils
 from src.utils.geometry_utils import get_homogeneous
-
-
 
 class ScanNetTrack(torch.utils.data.Dataset):
     @classmethod
@@ -47,7 +37,6 @@ class ScanNetTrack(torch.utils.data.Dataset):
         detection_batch_split = []
         global_track_ids = []
         valid_list = []
-        gt_list = []
 
         n_features = data_list[0]['detections'].shape[0]
         detections = torch.ones((len(data_list), n_features, max_dets), dtype=torch.float) * -1
@@ -118,9 +107,11 @@ class ScanNetTrack(torch.utils.data.Dataset):
         # with open("./data/ScanNet/imovotenet_scan2cad/{}_tracking_ls".format(split), "rb") as f:
         #     data = pickle.load(f)
         # self.files = data['files']
+
         with open("./data/ScanNet/scannet_imgs", "rb") as f:
             data = pickle.load(f)
         self.files = data
+
         # if split == "val":
         #     self.file_indices = data['file_indices'][:10000]
         # else:
