@@ -43,7 +43,7 @@ def demo():
     dataset = ScanNetTrack()
     
     for seq_id in dataset.files:
-        print("processing: {seq_id}")
+        print("processing :", seq_id)
         out_dir = os.path.join(args.out_dir, seq_id)
         if not os.path.exists(out_dir):
             os.makedirs(out_dir)
