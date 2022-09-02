@@ -33,8 +33,9 @@ def demo():
     axis_align_mat = scannet_utils.read_meta_file(meta_path)
     scene_mesh = o3d_helper.load_scene_mesh(mesh_path, trans_mat=axis_align_mat)
 
-    # visual_list = [scene_mesh]
     visual_list = []
+    visual_list.append(scene_mesh)
+
     for i, quadric in enumerate(tracks["quadrics"]):
         if len(tracks["tracks"][i]) < args.min_views:
             continue
@@ -52,8 +53,10 @@ def demo():
         rgb = np.asarray(rgb) / 255.
         mesh_o3d.paint_uniform_color(rgb)
         visual_list.append(mesh_o3d)
-        # bbx = o3d_helper.linemesh_from_pc(tracks['bboxes_qc'][i], colors=rgb[None, :])
-        # visual_list.extend(bbx)
+
+        #  bbx = o3d_helper.linemesh_from_pc(tracks['bboxes_qc'][i], colors=rgb[None, :])
+        #  visual_list.extend(bbx)
+
     mesh_frame = o3d.geometry.TriangleMesh.create_coordinate_frame(
         size=0.6, origin=[-0, -0, -0])
     visual_list.append(mesh_frame)
